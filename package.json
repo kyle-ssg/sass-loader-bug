@@ -7,7 +7,7 @@
     "env_prod": "ENV=prod node ./bin/env.js",
     "env_dev": "ENV=dev node ./bin/env.js",
     "start": "npm run env_prod && npm run bundle",
-    "dev": "npm run env_dev && nodemon --watch server --ignore server/config/config.json --watch webpack --exec node ./server",
+    "dev": "npm run env_dev && node ./server",
     "bundle": "node node_modules/.bin/webpack -p --progress --config ./webpack/webpack.config.prod.js",
     "bundle_win": "node_modules/.bin/webpack.cmd -p --progress --config ./webpack/webpack.config.prod.js"
   },
